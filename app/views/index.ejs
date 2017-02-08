@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="text-center">
+            <h1><%= title %></h1>
+          </div>
+          <hr><br>
+          <p id="search-info">You searched for <strong><span id="search-info-span"></span></strong></p>
+          <!-- <form action="/api" method="POST"> -->
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" name="search" placeholder="Enter a search term..." id="search-term" required>
+              <input type="date" class="form-control" name="Start date:" placeholder="Enter a start date..." id="start-date">
+              <input type="date" class="form-control" name="End date:" placeholder="Enter an end date..." id="end-date">
+            </div>
+            <div>
+              <legend>Count bucket size</legend>
+              <row>
+                <label><input type="radio" name="bucket" id="b1" value="D" checked> Daily</label>
+                <label><input type="radio" name="bucket" id="b2" value="H"> Hourly</label>
+                <label><input type="radio" name="bucket" id="b3" value="M"> By minute</label>
+              </row>
+            </div>
+            <div>
+              <legend>Search Options<legend>
+              <row>
+                <label><input type="checkbox" id="cb1" value="get_data"> Collect Tweets</label><br>
+              </row>
+            </div>
+          </form>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          <br><br>
+          <canvas id="chart" width="400" height="400"></canvas>
+        </div>
+      </div>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script type="text/javascript" src="javascripts/counts.js"></script>
+  </body>
+</html>
