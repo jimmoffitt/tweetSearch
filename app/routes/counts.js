@@ -3,7 +3,9 @@ var express = require('express');
 var router = express.Router();
 
 var config = require('../config/config.js');
+/* Counts are not stored in database. 
 var data = require('../data/db.js');
+*/
 
 //api authentication (one set on server side).
 var username = config.username;
@@ -50,7 +52,7 @@ function getCounts(query, callback) {
     if (err) callback(err);
     var data = JSON.parse(body).results;
     transform(data, query, function(error, tweets) {
-      addDataToDatabase(tweets);
+      //addDataToDatabase(tweets);
       console.log(tweets.days);
       callback(null, tweets.days);
     });
