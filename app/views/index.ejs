@@ -8,7 +8,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
+        <div class="col-xs-6 col-xs-offset-3">
           <div class="text-center">
             <h1><%= title %></h1>
           </div>
@@ -17,26 +17,10 @@
           <!-- <form action="/api" method="POST"> -->
           <form>
             <div class="form-group">
-              <input type="text" class="form-control" name="search" placeholder="Enter a search term..." id="search-term" required>
-              <input type="date" class="form-control" name="Start date:" placeholder="Enter a start date..." id="start-date">
-              <input type="date" class="form-control" name="End date:" placeholder="Enter an end date..." id="end-date">
+              <input type="text" class="form-control" name="search" placeholder="Enter a search term.." id="search-term" required>
             </div>
-            <div>
-              <legend>Count bucket size</legend>
-              <row>
-                <label><input type="radio" name="bucket" id="b1" value="D" checked> Daily</label>
-                <label><input type="radio" name="bucket" id="b2" value="H"> Hourly</label>
-                <label><input type="radio" name="bucket" id="b3" value="M"> By minute</label>
-              </row>
-            </div>
-            <div>
-              <legend>Search Options<legend>
-              <row>
-                <label><input type="checkbox" id="cb1" value="get_data"> Collect Tweets</label><br>
-              </row>
-            </div>
-          </form>
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
           <br><br>
           <canvas id="chart" width="400" height="400"></canvas>
         </div>
