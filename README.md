@@ -24,3 +24,31 @@ saveData
 dropData
 loadData
 
+------------------------------------
+
+TODO:
+
+[] using mongo with a single overwritten collection...
+
+[] Add in Search data requests...
+[] Managing multiple requests...
+    [] progress updates ("making 4th request")
+[] Add in UI details
+  [] Datetime pickers
+  [] radio buttons (count bins)
+  [] Checkboxes, retrieve data (or just counts)
+
+
+
+  [] Chart to-dos
+    []X-axis labels
+
+
+
+
+
+
+Deploy notes:
+
+[] in app folder, run ```npm install```
+[] in app folder, run ```express```
