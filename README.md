@@ -1,6 +1,8 @@
 # tweetSearch
 simple (?) demo app for Twitter Search using node/js/express.
 
+Express-based UI for entering query and seeing 30-day hourly counts.
+
 Routes
 -----------
 
@@ -15,14 +17,12 @@ dev: --> mongo db with 'tweets' collection, 'actor' collection
 
 
 /dashboard
-
 stats: # of Tweets, request period?
 
 /options
-
-saveData
-dropData
-loadData
++ saveData
++ dropData
++ loadData
 
 ------------------------------------
 
@@ -31,14 +31,14 @@ TODO:
 [] using mongo with a single overwritten collection...
 
 [] Add in Search data requests...
+
 [] Managing multiple requests...
     [] progress updates ("making 4th request")
+    
 [] Add in UI details
   [] Datetime pickers
   [] radio buttons (count bins)
   [] Checkboxes, retrieve data (or just counts)
-
-
 
   [] Chart to-dos
     []X-axis labels
